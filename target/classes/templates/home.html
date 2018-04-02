@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head lang="en">
+  	<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+  </head>
+  <body>
+  	<div class="container">
+  	
+	  	<div class="banner">
+	   		<h1>Whitepaper</h1>
+	   	</div>
+	   	
+	   	<br />
+	   	
+	   	<div class="searchForm">
+	   		<form th:object="${queryObject}" method="POST">
+		   		<div class="form-group">
+					<label for="queryString">Search Across My PC</label>
+				    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Search" th:field="*{queryString}"/>
+				    <small id="emailHelp" class="form-text text-muted">Enter your search query here to search across your network</small>
+				</div>
+	  			
+	  			<div class="form-check">
+	    			<input type="checkbox" class="form-check-input" id="exampleCheck1" th:field="*{saveSearch}" />
+	    			<label class="form-check-label" for="exampleCheck1">Save this search</label>
+	  			</div>
+	  
+	  			<button type="submit" class="btn btn-primary">Submit</button>
+  			</form>
+  
+	   	</div>
+	   	
+	   	<br />
+	   	
+	   	<div class="otherFeatures">
+		   	<a class="btn btn-secondary btn-sm" th:href="#" role="button">Upload new content</a>
+		   	<a class="btn btn-secondary btn-sm" th:href="#" role="button">Store my content</a>
+	   	</div>
+	   
+
+	   	
+   	</div>
+  </body>
+</html>
